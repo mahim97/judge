@@ -1,0 +1,12 @@
+<h1>Question list</h1>
+{% if que %}
+	<ul>
+	{% for q in que %}
+		<li><a href="/ques/{{ q.prob_code }}/detail">{{ q.prob_code }}</a></li>
+	{% endfor %}
+	<ul>
+{% else %}
+    <p>No questions are available.</p>
+{% endif %}
+
+

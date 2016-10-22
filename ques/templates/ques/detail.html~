@@ -1,0 +1,4 @@
+<h1>Question Details</h1>
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<p>{{question2.prob_statement}}</p>
