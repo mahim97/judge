@@ -1,12 +1,41 @@
-<h1>Question list</h1>
-{% if que %}
-	<ul>
-	{% for q in que %}
-		<li><a href="/ques/{{ q.prob_code }}/detail">{{ q.prob_code }}</a></li>
-	{% endfor %}
-	<ul>
-{% else %}
-    <p>No questions are available.</p>
-{% endif %}
+<html>
+<head>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style/main.css">
+</head>
+<body >
+
+	<h1>Question list</h1>
+	
+	<table id="11" class="table table-striped table-bordered" cellspacing="0" width="100%">
+		<thead>
+            <tr>
+                <th>Question</th>
+                <th>Successful Submissions</th>
+            </tr>
+        </thead>
+        
+		<tbody>
+		    {% if que %}
+		    {% for q in que %}
+			<tr>
+			
+				<td><a href="/ques/{{ q.prob_code }}/detail">{{ q.prob_code }}</a></td>
+				<td>{{ q.sub }}</td>
+			
+			<tr>
+			{% endfor %}
+			
+			{% else %}
+			<p>No questions are available.</p>
+			{% endif %}
+        </tbody>
+   	</table>
+</body>
+</html>
 
 

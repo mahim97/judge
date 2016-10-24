@@ -1,15 +1,30 @@
-<h1>Question Details</h1>
-{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
-<h2>Code:{{question2.prob_code}}</h2>
-<h2>Statement</h2>
-<p>{{question2.prob_statement}}</p>
-<h2>Input</h2>
-<p>{{question2.inp}}</p>
-<h2>Output</h2>
-<p>{{question2.out}}</p>
-<h2>Constraints</h2>
-<p>{{question2.constra}}</p>
-<h2>Example</h2>
-<p>{{question2.eg}}</p>
-<h2>Author</h2>
-<p>{{question2.author}}</p>
+<html>
+<head>
+	<h1>Question Details</h1>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style/main.css">
+</head>
+<body >
+	<div class="panel panel-default">
+		<div class="panel-body">
+			{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+			<p><i>Code:{{question2.prob_code}}</i></p>
+			<h3>Statement</h3>
+			<p>{{question2.prob_statement}}</p>
+			<h3>Input</h3>
+			<p>{{question2.inp}}</p>
+			<h3>Output</h3>
+			<p>{{question2.out}}</p>
+			<h3>Constraints</h3>
+			<p>{{question2.constra}}</p>
+			<h3>Example</h3>
+			<p>{{question2.eg}}</p>
+			<h3>Author</h3>
+			<p>{{question2.author}}</p>
+		</div>
+	</div>
+</body>
